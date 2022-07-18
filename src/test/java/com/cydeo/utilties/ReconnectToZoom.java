@@ -12,6 +12,11 @@ import java.awt.event.InputEvent;
 
 public class ReconnectToZoom {
 
+    /**
+     * For fastest results.
+     * Without even opening this class:
+     * RIGHT CLICk on ReconnectToZoom class in the Utilities package and click on "Run..." button
+     */
     @Test
     public void ReconnectToZoom() throws InterruptedException, AWTException {
         Driver.getDriver().get("https://cybertekschool.zoom.us/j/9728392380#success");
