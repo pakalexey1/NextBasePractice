@@ -17,9 +17,10 @@ public class Login_StepDef {
 
     @Then("user should see CRM page")
     public void userShouldSeeCRMPage() {
-        BrowserUtils.waitFor(10);
+        BrowserUtils.waitFor(20);
         Assert.assertEquals("CRM", crmPage.header.getText());
-        Assert.assertTrue(BrowserUtils.verifyTitle("(54) Portal"));
+        BrowserUtils.waitFor(10);
+        Assert.assertTrue(BrowserUtils.verifyTitleContains("Portal"));
 
         browserUtils.logout();
     }

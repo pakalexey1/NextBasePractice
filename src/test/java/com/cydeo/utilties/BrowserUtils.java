@@ -25,6 +25,10 @@ public class BrowserUtils extends CrmPage {
         return expectedTitle.equals(Driver.getDriver().getTitle());
     }
 
+    public static boolean verifyTitleContains(String partOfTitle) {
+        return Driver.getDriver().getTitle().contains(partOfTitle);
+    }
+
     protected WebDriverWait getWait10() {
         if (wait == null) {
             wait = new WebDriverWait(Driver.getDriver(), 10);
